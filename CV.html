@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum</title>
+</head>
+
+<body>
+    <!--    Consignas:
+
+crear un CV con diferentes las siguientes caracteristicas :
+
+     la primera es:  Utilizar dos  Sections el detalle del postulante , subiendo una imagen ,
+    y agregar un Section para mostrar nuestra la capacitacion ,
+      y un Section  para mostrar la experiencia laboral
+
+      la segunda : es utilizar etiquetas anidadas (una etiqueta adentro de la otra ) 
+       para nuestro puesto que ocupamos dentro experiencia laboral , 
+       y agregar un una tabla utilizando el atributo table donde ponemos las tecnologias que utilizamos utilizando etiquetas thead tbody
+
+    la tercera: es realizar un formulario para contactar el perfil del CV
+    que nos redirecione a una pagina con una "respuesta" , esta segunda pagina se debe llamar "contacto.html"
+    -->
+
+
+    <section>
+        <h1> Programador Trainee</h1>
+        <img src="perfiil.jpg" alt="foto" width="100" height="100">
+        <p> Telefono </p>:223 444 656
+        <p>
+            email
+            programador@gmail.com
+        </p>
+    </section>
+
+    <!--Formacion-->
+
+    <section>
+        <h2>Estudios </h2>
+        <p>Tecnicatura informatica</p>
+    </section>
+
+
+    <!--Experiencia laboral-->
+    <section>
+        <h2>Experiencia laboral </h2>
+        <ul>
+            <li>Empresa: Freelance</li>
+            <li>Puesto <em>Desarrollador html </em></li>
+            <li>
+                <h3>Responsabilidades</h3>
+                <ul>
+                    <li>Desarrolar proyectos</li>
+                    <li>Planificar</li>
+                    <li>Gestionar proyectos</li>
+                    <li>Desarrollo backend</li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>Empresa: Freelance</li>
+            <li>Puesto <en>Desarrollador html </en> <!-- una estructura de etiquetas anidadas -->
+            </li>
+            <li>
+                <em>Responsabilidades</em>
+                <!--em para darle enfasis a ciertas palabras -->
+                <ol>
+                    <li>Diseño web </li>
+                    <li>liderar grupo </li>
+                    <li>Gestionar proyectos</li>
+                    <li>Desarrollo backend</li>
+                </ol>
+            </li>
+            <li></li>
+        </ul>
+    </section>
+
+    <!--Habilidades tecnicas-->
+    <section>
+        <table border="1">
+            <!-- borde a la tabla de habilidades-->
+
+            <thead>
+                <!-- thead define una sección de encabezado en una tabla-->
+                <tr>
+                    <th>Lenguaje de programacion</th>
+                    <!-- definimos una celda como encabezado de un grupo de celdas en una tabla-->
+                    <th>Api rest</th>
+                    <th>Base de datos</th>
+                    <th>Frameworks/libreria</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- tbody contiene a un bloque de filas (tr) que representaa a la sección del cuerpo de una tabla-->
+                <tr>
+                    <td>Html</td>
+                    <td>Postman</td>
+                    <td>Mysql</td>
+                    <td>Laravel</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Formulario de contacto -->
+    <section>
+        <h2 class="title">Contactanos</h2>
+        <div class="formulario">
+            <h1>Datos de Contacto</h1>
+
+
+            <form action="contacto.html">
+                <!-- enviamos el formulario a contacto.html-->
+                <p>
+                    <label for="nombre" class="colocar_nombre">Nombre</label>
+                    <input type="text" name="introducir_nombre" id="nombre" required="obligatorio"
+                        placeholder="Escribe tu nombre">
+                </p>
+
+                <p>
+                    <label for="email" class="colocar_email">Email
+                    </label>
+                    <input type="email" name="introducir_email" id="email" required="obligatorio"
+                        placeholder="Escribe tu Email">
+                </p>
+
+                <p>
+                    <label for="telefone" class="colocar_telefono">Teléfono
+                    </label>
+                    <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+                </p>
+                <p>
+                    <label for="asunto" class="colocar_asunto">Asunto
+
+                    </label>
+                    <input type="text" name="introducir_asunto" id="assunto" required="obligatorio"
+                        placeholder="Escribe un asunto">
+                </p>
+
+                <p>
+                    <label for="mensaje" class="colocar_mensaje">Mensaje
+
+                    </label>
+                    <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio"
+                        placeholder="Deja aquí tu comentario"></textarea>
+                    <button type="submit">Contactar</button>
+            </form>
+    </section>
+
+</html>
